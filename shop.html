@@ -7,14 +7,46 @@
 </head>
 <body>
 
-<header class="navbar">
-    <h1 class="logo">DressStore</h1>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="shop.html">Shop</a>
-        <a href="cart.html">Cart</a>
-    </nav>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Products</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<header>
+  <h1>My Fashion Store</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="products.html">Products</a>
+    <a href="cart.html">Cart</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 </header>
+
+<section>
+  <h2>Our Products</h2>
+
+  <div class="product">
+    <img src="dress1.jpg">
+    <h3>Red Dress</h3>
+    <p>₹999</p>
+    <button onclick="addToCart('Red Dress', 999)">Add to Cart</button>
+  </div>
+
+  <div class="product">
+    <img src="dress2.jpg">
+    <h3>Blue Dress</h3>
+    <p>₹1199</p>
+    <button onclick="addToCart('Blue Dress', 1199)">Add to Cart</button>
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
 
 <h2 class="title">Shop Dresses</h2>
 

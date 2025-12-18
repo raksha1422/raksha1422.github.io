@@ -1,35 +1,28 @@
-function orderWhatsApp() {
-    if (cart.length === 0) {
-        alert("Cart is empty");
-        return;
-    }
-
-    let message = "Hello, I want to order:\n";
-
-    cart.forEach(item => {
-        message += item.product + " - ₹" + item.price + "\n";
-    });
-
-    let phoneNumber = "7899411200"; // your WhatsApp number
-    let url = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
-
-    window.open(url, "_blank");
-}
-
-let cart = [];
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 function addToCart(product, price) {
-    cart.push({ product, price });
-    displayCart();
+  cart.push({ product, price });
+  localStorage.setItem("cart", JSON.stringify(cart));
+  alert("Added to cart");
 }
 
 function displayCart() {
-    let cartItems = document.getElementById("cartItems");
-    cartItems.innerHTML = "";
+  let cartItems = document.getElementById("cartItems");
+  if (!cartItems) return;
 
-    cart.forEach(item => {
-        let li = document.createElement("li");
-        li.textContent = item.product + " - ₹" + item.price;
-        cartItems.appendChild(li);
-    });
+  cartItems.innerHTML = "";
+  cart.forEach(item => {
+    let li = document.createElement("li");
+    li.textContent = item.product + " - ₹" + item.price;
+    cartItems.appendChild(li);
+  });
 }
+
+function orderWhatsApp() {
+  let message = "Order:\n";
+  cart.forEach(i => message += i.product + " - ₹" + i.price + "\n");
+  window.open("https://wa.me/91XXXXXXXXXX?text=" + encodeURIComponent(message));
+}
+
+displayCart();
+
