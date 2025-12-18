@@ -10,6 +10,11 @@
 <header>
   <h1>My Fashion Store</h1>
   <nav>
+    <script>
+if (localStorage.getItem("loggedIn") !== "true") {
+  window.location.href = "login.html";
+}
+</script>
     <a href="index.html">Home</a>
     <a href="products.html">Products</a>
     <a href="cart.html">Cart</a>
