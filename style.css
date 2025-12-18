@@ -47,3 +47,34 @@ button {
     font-size: 16px;
     margin-top: 10px;
 }
+/* Mobile Responsive */
+@media (max-width: 768px) {
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .product {
+        background: white;
+        padding: 15px;
+        margin: 10px;
+        display: inline-block;
+        width: 220px;
+        vertical-align: top;
+}
+
+
+    header h1 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    section {
+        padding: 10px;
+    }
+
+    button {
+        width: 100%;
+    }
+}
