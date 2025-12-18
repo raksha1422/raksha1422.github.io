@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Shop</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<h1>My Shopping Website</h1>
+<div id="product-list"></div>
+
+<script src="js/products.js"></script>
+<script>
+const list = document.getElementById("product-list");
+
+products.forEach(p => {
+  list.innerHTML += `
+    <div class="product">
+      <img src="${p.image}">
+      <h3>${p.name}</h3>
+      <p>₹${p.price}</p>
+      <button onclick="addToCart(${p.id})">Add to Cart</button>
+    </div>
+  `;
+});
+</script>
+
+<script src="js/cart.js"></script>
+</body>
+</html>

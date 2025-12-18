@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Cart</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body onload="displayCart()">
+
+<header class="navbar">
+    <h1 class="logo">DressStore</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="cart.html">Cart</a>
+    </nav>
+</header>
+
+<h2 class="title">Your Cart</h2>
+
+<table border="1" width="80%" align="center">
+    <thead>
+        <tr>
+            <th>Dress</th>
+            <th>Price</th>
+            <th>Qty</th>
+            <th>Total</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody id="cart-items"></tbody>
+</table>
+
+<h3 style="text-align:center;">Grand Total: <span id="total">₹0</span></h3>
+
+</body>
+</html>
